@@ -1,4 +1,4 @@
-const timer = document.getElementById('watch');
+const timer = document.getElementById("watch");
 var hr = 0;
 var min = 0;
 var sec = 0;
@@ -19,7 +19,6 @@ function stopTimer() {
 function timerCycle() {
   if (rank_count > 2) {
     stopTimer();
-
   }
   if (stoptime == false) {
     sec = parseInt(sec);
@@ -39,21 +38,21 @@ function timerCycle() {
     }
 
     if (sec < 10 || sec == 0) {
-      sec = '0' + sec;
+      sec = "0" + sec;
     }
     if (min < 10 || min == 0) {
-      min = '0' + min;
+      min = "0" + min;
     }
     if (hr < 10 || hr == 0) {
-      hr = '0' + hr;
+      hr = "0" + hr;
     }
 
-    timer.innerHTML = hr + ':' + min + ':' + sec;
+    timer.innerHTML = hr + ":" + min + ":" + sec;
 
     setTimeout("timerCycle()", watchsec);
   }
 }
 
 function resetTimer() {
-  timer.innerHTML = '00:00:00';
+  timer.innerHTML = "00:00:00";
 }
